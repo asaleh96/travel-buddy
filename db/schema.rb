@@ -21,13 +21,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_015538) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "interests_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "interest_id", null: false
-    t.index ["interest_id"], name: "index_interests_users_on_interest_id"
-    t.index ["user_id"], name: "index_interests_users_on_user_id"
-  end
-
   create_table "trips", force: :cascade do |t|
     t.string "location"
     t.date "start_date"
@@ -37,13 +30,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_015538) do
     t.integer "budget"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "trips_users", id: false, force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "trip_id", null: false
-    t.index ["trip_id"], name: "index_trips_users_on_trip_id"
-    t.index ["user_id"], name: "index_trips_users_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -56,6 +42,20 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_18_015538) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "users_interests", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "interest_id", null: false
+    t.index ["interest_id"], name: "index_users_interests_on_interest_id"
+    t.index ["user_id"], name: "index_users_interests_on_user_id"
+  end
+
+  create_table "users_trips", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "trip_id", null: false
+    t.index ["trip_id"], name: "index_users_trips_on_trip_id"
+    t.index ["user_id"], name: "index_users_trips_on_user_id"
   end
 
 end
