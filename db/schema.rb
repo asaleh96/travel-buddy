@@ -10,9 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_16_205314) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_18_015538) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "interests", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "interests_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "interest_id", null: false
+    t.index ["interest_id"], name: "index_interests_users_on_interest_id"
+    t.index ["user_id"], name: "index_interests_users_on_user_id"
+  end
+
+  create_table "trips", force: :cascade do |t|
+    t.string "location"
+    t.date "start_date"
+    t.date "end_date"
+    t.string "name"
+    t.string "description"
+    t.integer "budget"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trips_users", id: false, force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "trip_id", null: false
+    t.index ["trip_id"], name: "index_trips_users_on_trip_id"
+    t.index ["user_id"], name: "index_trips_users_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
