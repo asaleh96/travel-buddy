@@ -24,27 +24,25 @@ user1 = User.create!(
   first_name: "Luke",
   last_name: "Skywalker",
   gender: "Male",
-  dob: "12/31/1991",
+  date_of_birth: "31/12/1991",
   location: "London",
   password: "123456",
-  user_name: "luke",
-  user_trips_id: 1
+  username: "luke"
 )
-puts "User n.1 - username: #{user1.user_name} - was created. "
+puts "User n.1 - username: #{user1.username} - was created. "
 
 puts "Creating n.2 User"
 user2 = User.create!(
   email: "2@gmail.com",
   first_name: "Marty",
   last_name: "McFly",
-  gender: "Male",
-  dob: "03/11/1999",
+  gender: "Non-binary",
+  date_of_birth: "03/11/1999",
   location: "London",
   password: "123456",
-  user_name: "marty",
-  user_trips_id: 2
+  username: "marty"
 )
-puts "User n.2 - username: #{user2.user_name} - was created. "
+puts "User n.2 - username: #{user2.username} - was created. "
 
 puts "Creating n.3 User"
 user3 = User.create!(
@@ -52,12 +50,12 @@ user3 = User.create!(
   first_name: "Travis",
   last_name: "Bickle",
   gender: "Male",
-  dob: "05/28/1996",
+  date_of_birth: "28/05/1996",
   location: "London",
   password: "123456",
-  user_name: "travis"
+  username: "travis"
 )
-puts "User n.3 - username: #{user3.user_name} - was created. "
+puts "User n.3 - username: #{user3.username} - was created. "
 
 puts "Creating n.4 User"
 user4 = User.create!(
@@ -65,12 +63,12 @@ user4 = User.create!(
   first_name: "Beatrix",
   last_name: "Kiddo",
   gender: "Female",
-  dob: "10/10/1994",
+  date_of_birth: "10/10/1994",
   location: "London",
   password: "123456",
-  user_name: "beatrix"
+  username: "beatrix"
 )
-puts "User n.4 - username: #{user4.user_name} - was created. "
+puts "User n.4 - username: #{user4.username} - was created. "
 
 puts "Creating n.5 User"
 user5 = User.create!(
@@ -78,12 +76,12 @@ user5 = User.create!(
   first_name: "Sibilla",
   last_name: "Cooman",
   gender: "Female",
-  dob: "05/01/1994",
+  date_of_birth: "05/01/1994",
   location: "London",
   password: "123456",
-  user_name: "sibilla"
+  username: "sibilla"
 )
-puts "User n.5 - username: #{user5.user_name} - was created. "
+puts "User n.5 - username: #{user5.username} - was created. "
 
 puts "Creating n.6 User"
 user6 = User.create!(
@@ -91,12 +89,12 @@ user6 = User.create!(
   first_name: "Talisa",
   last_name: "Maegyr",
   gender: "Female",
-  dob: "13/02/1996",
+  date_of_birth: "13/02/1996",
   location: "London",
   password: "123456",
-  user_name: "talisa"
+  username: "talisa"
 )
-puts "User n.6 - username: #{user6.user_name} - was created. "
+puts "User n.6 - username: #{user6.username} - was created. "
 
 
 
