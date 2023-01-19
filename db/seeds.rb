@@ -18,13 +18,85 @@ puts "Data successfully dropped!"
 
 puts "Creating Users..."
 
-  10.times do |i|
-    User.create!(
-      email: "#{i+1}@gmail.com",
-      password: 123456
-    )
-    puts "User N.#{i+1} Created"
-  end
+puts "Creating n.1 User"
+user1 = User.create!(
+  email: "#1@gmail.com",
+  first_name: "Luke",
+  last_name: "Skywalker",
+  gender: "Male",
+  date_of_birth: "31/12/1991",
+  location: "London",
+  password: "123456",
+  username: "luke"
+)
+puts "User n.1 - username: #{user1.username} - was created. "
+
+puts "Creating n.2 User"
+user2 = User.create!(
+  email: "2@gmail.com",
+  first_name: "Marty",
+  last_name: "McFly",
+  gender: "Non-binary",
+  date_of_birth: "03/11/1999",
+  location: "London",
+  password: "123456",
+  username: "marty"
+)
+puts "User n.2 - username: #{user2.username} - was created. "
+
+puts "Creating n.3 User"
+user3 = User.create!(
+  email: "3@gmail.com",
+  first_name: "Travis",
+  last_name: "Bickle",
+  gender: "Male",
+  date_of_birth: "28/05/1996",
+  location: "London",
+  password: "123456",
+  username: "travis"
+)
+puts "User n.3 - username: #{user3.username} - was created. "
+
+puts "Creating n.4 User"
+user4 = User.create!(
+  email: "4@gmail.com",
+  first_name: "Beatrix",
+  last_name: "Kiddo",
+  gender: "Female",
+  date_of_birth: "10/10/1994",
+  location: "London",
+  password: "123456",
+  username: "beatrix"
+)
+puts "User n.4 - username: #{user4.username} - was created. "
+
+puts "Creating n.5 User"
+user5 = User.create!(
+  email: "5@gmail.com",
+  first_name: "Sibilla",
+  last_name: "Cooman",
+  gender: "Female",
+  date_of_birth: "05/01/1994",
+  location: "London",
+  password: "123456",
+  username: "sibilla"
+)
+puts "User n.5 - username: #{user5.username} - was created. "
+
+puts "Creating n.6 User"
+user6 = User.create!(
+  email: "6@gmail.com",
+  first_name: "Talisa",
+  last_name: "Maegyr",
+  gender: "Female",
+  date_of_birth: "13/02/1996",
+  location: "London",
+  password: "123456",
+  username: "talisa"
+)
+puts "User n.6 - username: #{user6.username} - was created. "
+
+
 
 # 2. Creating trips
 
