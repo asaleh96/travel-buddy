@@ -4,6 +4,26 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :first_name,
+                required: true %>
+    <%= f.input :last_name,
+                required: true %>
+    <%= f.input :username,
+                required: true %>
+     <%= f.input :date_of_birth,
+                required: true,
+                as: :date,
+                start_year: Date.today.year - 100,
+                end_year: Date.today.year,
+                :order => [:day, :month, :year] %>
+     <%= f.input :gender,
+                required: true,
+                as: :select, collection: [['Male', 'Male'],
+                                          ['Female', 'Female'],
+                                          ['Non-binary', 'Non-binary'],
+                                          ['Prefer not to say', 'Prefer not to say']] %>
+     <%= f.input :location,
+                required: true %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
