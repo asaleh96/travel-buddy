@@ -1,0 +1,12 @@
+
+<h1> Hello! This is the User Index page.</h1>
+
+<% @users.each do | user| %>
+<div class="m-4">
+    Full name: <%= user.first_name %> <%= user.last_name %>
+    Username: <%= user.username %>
+    Date of birth: <%= user.date_of_birth %>
+    Location: <%= user.location %>
+     <%= link_to "Go To Profile", user_path(user), class: "btn" %>
+  </div>
+<% end %>
