@@ -1,0 +1,15 @@
+<h1> Hello! This is the User Show Page.</h1>
+
+<div class="m-4">
+    Full name: <%= @user.first_name %> <%= @user.last_name %>
+    Username: <%= @user.username %>
+    Date of birth: <%= @user.date_of_birth %>
+    Location: <%= @user.location %>
+
+    <% if @user == current_user %>
+      <%= link_to "Edit", edit_user_registration_path(@user), class: "btn" %>
+    <% end %>
+
+    <%= link_to 'Go Back', :back , class: "btn" %>
+
+</div>
