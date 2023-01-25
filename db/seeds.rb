@@ -96,6 +96,32 @@ user6 = User.create!(
 )
 puts "User n.6 - username: #{user6.username} - was created. "
 
+puts "Creating n.7 User"
+user7 = User.create!(
+  email: "7@gmail.com",
+  first_name: "Danny",
+  last_name: "Zuko",
+  gender: "Male",
+  date_of_birth: "09/09/1992",
+  location: "London",
+  password: "123456",
+  username: "danny"
+)
+puts "User n.7 - username: #{user7.username} - was created. "
+
+puts "Creating n.8 User"
+user8 = User.create!(
+  email: "8@gmail.com",
+  first_name: "Haymitch",
+  last_name: "Abernathy",
+  gender: "Male",
+  date_of_birth: "05/10/1988",
+  location: "London",
+  password: "123456",
+  username: "haymitch"
+)
+puts "User n.8 - username: #{user8.username} - was created. "
+
 
 
 # 2. Creating trips
