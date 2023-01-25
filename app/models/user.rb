@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_and_belongs_to_many :interests
   has_and_belongs_to_many :trips
+  accepts_nested_attributes_for :interests
 
   GENDER_OPTIONS = ["Male", "Female", "Non-binary", "Prefer not to say"]
 

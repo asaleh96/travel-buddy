@@ -33,6 +33,8 @@ gem "rspec-rails"
 
 gem "capybara"
 
+gem "pry-rails"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
